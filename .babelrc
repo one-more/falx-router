@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "env",
+      {"modules": false}
+    ],
+    "flow"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    "syntax-dynamic-import"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "name": "falx-router",
+  "version": "1.0.0",
+  "description": "falx based router",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "webpack --mode production --display-modules",
+    "build:publish": "npm run test && npm run build && npm publish",
+    "flow": "flow",
+    "start": "webpack-dev-server --mode production --config webpack.dev.config.js --open",
+    "dist:add": "git add . -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/one-more/falx-router.git"
+  },
+  "keywords": [
+    "falx",
+    "router"
+  ],
+  "author": "one-more",
+  "license": "SEE LICENCE IN LICENCE",
+  "bugs": {
+    "url": "https://github.com/one-more/falx-router/issues"
+  },
+  "homepage": "https://github.com/one-more/falx-router#readme",
+  "peerDependencies": {
+    "falx": "^1.1.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "falx": "^1.1.4",
+    "flow-bin": "^0.66.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^22.1.4",
+    "pre-commit": "^1.2.2",
+    "slim-js": "^3.2.7",
+    "webpack": "^4.0.0-beta.1",
+    "webpack-cli": "^2.0.4",
+    "webpack-dev-server": "^3.1.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ],
+      "flow"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-decorators-legacy",
+      "syntax-dynamic-import"
+    ]
+  },
+  "dependencies": {
+    "history": "^4.7.2",
+    "route-parser": "0.0.5"
+  },
+  "pre-commit": [
+    "build",
+    "dist:add"
+  ]
+}
