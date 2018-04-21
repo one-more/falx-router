@@ -5,7 +5,7 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         filename: 'main.js',
         library: 'falx-router',
-        libraryTarget:'umd'
+        libraryTarget:'commonjs2'
     },
     module: {
         rules: [
