@@ -26,9 +26,7 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, 'test/dist'),
-        historyApiFallback: {
-            index: 'index.html'
-        }
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({
